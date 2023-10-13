@@ -143,6 +143,8 @@ If new identities do not need to be linked, then you can omit the `identity` and
 }
 ```
 
+Note: What is the right payload for delete operation?
+
 ## Dynamically pass primary identities
 
 For XDM updates, the schema must be enabled for [!DNL Profile] and contain a primary identity. You can specify the primary identity of an XDM schema in two ways:
@@ -171,8 +173,7 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
          "data": "create"
      }
     },
-    {
-        "body": {
+    "body": {
         "homeAddress": {
             "country": "US",
             "state": "GA",
@@ -217,9 +218,8 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
             "identity": "create",
             "identityDatasetId": "6254a93b851ecd194b64af9e"
       }
-    },
-    {        
-       "body": {
+    },        
+    "body": {
         "homeAddress": {
             "country": "US",
             "state": "GA",
